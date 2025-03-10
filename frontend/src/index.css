@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', 'Segoe UI', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f5;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.highlight {
+  background-color: rgba(0, 119, 181, 0.1);
+  font-weight: 500;
+}
+
+.job-table-container {
+  overflow-x: auto;
+}
+
+.job-description-cell {
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.agent-sidebar {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.agent-status {
+  padding: 6px 12px;
+  border-radius: 16px;
+  display: inline-block;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.status-running {
+  background-color: #e3f2fd;
+  color: #0077B5;
+}
+
+.status-stopped {
+  background-color: #ffebee;
+  color: #d32f2f;
+}
+
+.status-waiting {
+  background-color: #fff8e1;
+  color: #f57c00;
+}
+
+.start-button {
+  background-color: #0077B5 !important;
+}
+
+.stop-button {
+  background-color: #d32f2f !important;
+} 
