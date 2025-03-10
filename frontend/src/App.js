@@ -12,6 +12,7 @@ function App() {
   const [agentStatus, setAgentStatus] = useState({
     status: "stopped",
     job_count: 0,
+    total_jobs_searched: 0,
     running_time: null,
     start_time: null,
   });

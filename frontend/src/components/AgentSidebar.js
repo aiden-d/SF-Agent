@@ -74,6 +74,15 @@ function AgentSidebar({ status, onStart, onStop, linkedInCredentialsSet }) {
           <Typography variant="h5">{status.job_count || 0}</Typography>
         </Box>
 
+        <Box>
+          <Typography variant="body2" color="text.secondary" gutterBottom>
+            Total Jobs Searched
+          </Typography>
+          <Typography variant="h5">
+            {status.total_jobs_searched || 0}
+          </Typography>
+        </Box>
+
         {status.start_time && (
           <Box>
             <Typography variant="body2" color="text.secondary" gutterBottom>

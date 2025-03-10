@@ -130,6 +130,8 @@ class LinkedInJobAgent:
     def __init__(self):
         # Create the LinkedIn client
         self.client = LinkedInClient()
+        # Counter for total jobs searched
+        self.total_jobs_searched = 0
 
     def search_jobs(
         self,
@@ -157,7 +159,11 @@ class LinkedInJobAgent:
                 print("No job listings found.")
                 return []
 
-            print(f"Found {len(job_listings)} job listings.")
+            # Increment the total jobs searched counter
+            self.total_jobs_searched += len(job_listings)
+            print(
+                f"Found {len(job_listings)} job listings. Total jobs searched: {self.total_jobs_searched}"
+            )
 
             # Step 2: Process each job
             for job in job_listings:

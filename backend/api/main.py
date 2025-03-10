@@ -104,6 +104,7 @@ class Job(BaseModel):
 class AgentStatus(BaseModel):
     status: str
     job_count: int
+    total_jobs_searched: int = 0
     running_time: Optional[str] = None
     start_time: Optional[str] = None
 
@@ -215,9 +216,15 @@ def get_agent_status():
             0
         ]  # Format as HH:MM:SS
 
+    # Get total jobs searched from agent if it exists
+    total_jobs_searched = 0
+    if agent is not None:
+        total_jobs_searched = getattr(agent, "total_jobs_searched", 0)
+
     return {
         "status": agent_status,
         "job_count": last_job_count,
+        "total_jobs_searched": total_jobs_searched,
         "running_time": running_time,
         "start_time": agent_start_time,
     }
